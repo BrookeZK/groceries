@@ -5,19 +5,20 @@ $(document).ready(function(){
     var thing3 = $("#thing3").val();
     var thing4 = $("#thing4").val();
     var thing5 = $("#thing5").val();
-    var groceries = [thing1, thing2, thing3, thing4, thing5];
+    var groceries = [thing1, thing2, thing3, thing4, thing5].sort();
 
     //forEACH function is below:
-    var upperCaseList = [];
-    groceries.forEach(function(groceryItem) {
-      upperCaseList.push(groceryItem.toUpperCase());
-    });
+    // var upperCaseList = [];
+    // groceries.forEach(function(groceryItem) {
+    //   upperCaseList.push(groceryItem.toUpperCase());
+    // });
 
 //map function is below:
     var upperCaseList = groceries.map(function(groceries){
       return groceries.toUpperCase();
     });
 
+    $("#main").hide();
     $("#list").show();
     $("#display").text(thing1 + ", " + thing2 + ", " + thing3 + ", " + thing4 + " and " + thing5 + ".");
 
